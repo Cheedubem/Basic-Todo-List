@@ -5,10 +5,10 @@ function addTask() {
   var taskText = taskInput.value.trim();
 
   if (taskText !== "") {
-    var li = document.createElement("li");
+    const li = document.createElement("li");
     li.innerHTML =
       taskText +
-      ' <button class="edit-btn" onclick="editTask(this)">Edit</button> <button class="delete-btn" onclick="deleteTask(this)">Delete</button>';
+      ' <div class="button-container"><button class="edit-btn" onclick="editTask(this)">Edit</button> <button class="delete-btn" onclick="deleteTask(this)">Delete</button></div>';
     taskList.appendChild(li);
     taskInput.value = "";
   } else {
